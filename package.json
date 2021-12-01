@@ -31,10 +31,12 @@
     "webpack-cli": "^4.9.1"
   },
   "scripts": {
+    "eject": "react-scripts eject",
+    "prepare": "npm run build && npm run build:component",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build:component": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' webpack --mode=production",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
